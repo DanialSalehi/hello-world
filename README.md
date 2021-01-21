@@ -1,4 +1,4 @@
-# hello-world
+# My first cods for first company i work at
 
 ## Project setup
 ```
