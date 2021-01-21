@@ -1,4 +1,4 @@
-# My first cods for first company i work at
+# My first codes for first company i work at
 
 ## Project setup
 ```
