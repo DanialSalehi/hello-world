@@ -1,4 +1,4 @@
-# hello-world
+# My first codes for first company i work at
 
 ## Project setup
 ```
