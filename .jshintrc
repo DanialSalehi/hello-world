@@ -1,10 +1,2 @@
-{
-  "undef": true,
-  "unused": true,
-  "globals": {
-    "MY_GLOBAL": true
-  },
-  "esversion": 9,
-  "node": true,
-  "trailingComma": "es6"
-}
+{ "undef": true, "unused": true, "globals": { "MY_GLOBAL": true }, "esversion":
+9, "node": true }

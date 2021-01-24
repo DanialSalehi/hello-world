@@ -16,6 +16,5 @@
   "trailingComma": false,
   "useTabs": false,
   "vueIndentScriptAndStyle": false,
-  "filepath": "d:\\Projects\\hello-world\\src\\views\\Home.vue",
   "parser": "vue"
 }
