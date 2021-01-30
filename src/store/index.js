@@ -5,11 +5,11 @@ export default new Vuex.Store({
   state: {
     Markers: [
       { coordinates: [51.420296, 35.732379], msg: "hello", colore: "blue" },
-      { coordinates: [51.42, 35.732379], msg: "hello22", colore: "red" },
+      { coordinates: [51.42, 35.732379], msg: "hello22", colore: "red" }
     ],
-    home: "Ahvaz",
+    home: "Ahvaz"
   },
   mutations: {},
   actions: {},
-  modules: {},
+  modules: {}
 });

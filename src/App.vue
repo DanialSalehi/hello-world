@@ -9,6 +9,7 @@
             <router-link to="/">Home</router-link> |
             <router-link to="/about">About</router-link>
           </div>
+          <br />
           <router-view class="d-flex justify-center" />
         </v-col>
       </v-container>
