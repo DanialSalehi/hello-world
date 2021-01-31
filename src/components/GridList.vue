@@ -11,11 +11,10 @@
         elevation="3"
         width="290"
         height="290"
-        @click="prodDitePage(p.rId)"
       >
         <mapir
           :center="c.coordinates"
-          :zoom="z"
+          :zoom="c.z"
           :interactive="false"
           :apiKey="apiKey"
           @click="setLocation"
@@ -23,8 +22,8 @@
           <mapMarker
             :coordinates.sync="c.coordinates"
             color="red"
+            :draggable="false"
             @click="showMsg = !showMsg"
-            :draggable="true"
           />
         </mapir>
       </v-card>

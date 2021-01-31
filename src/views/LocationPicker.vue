@@ -34,23 +34,30 @@
       <br />
       <v-row class="d-flex justify-center ">
         <v-col>
-          <div class="home" id="imap">
+          <div class="home red" id="imap">
             <mapir
-              :center="center"
-              :zoom="z"
+              id="map-main"
+              :center.sync="center"
+              :zoom.sync="z"
+              height="500"
+              width="700"
               :apiKey="apiKey"
               @click="setLocation"
             >
+              <div style="position: absolute; left: 47.5%; top:47%">
+                <v-icon color="primary" large @click="hh">
+                  mdi-map-marker
+                </v-icon>
+              </div>
               <mapMarker
-                v-for="(m, index) in Markers"
-                :key="index"
-                :coordinates.sync="m.coordinates"
+                :coordinates.sync="center"
                 color="red"
                 @click="showMsg = !showMsg"
                 :draggable="true"
               />
             </mapir>
-            <!--span>{{ apiKey }}</!--span-->
+
+            <map />
           </div>
         </v-col>
       </v-row>
@@ -86,14 +93,19 @@ export default {
   methods: {
     setLocation(e) {
       this.pikdLocation = [e.actualEvent.lngLat.lng, e.actualEvent.lngLat.lat];
+      console.log("480|130");
     },
     addNewLocation() {
       this.$store.state.Markers.push({
-        coordinates: this.pikdLocation,
+        coordinates: [this.center.lng, this.center.lat],
         msg: this.newMsg,
-        colore: "blue"
+        colore: "blue",
+        z: this.z
       });
-      console.log(this.$store.state.Markers);
+      console.log(this.center);
+    },
+    hh(e) {
+      console.log(e);
     }
   }
 };
@@ -101,7 +113,7 @@ export default {
 
 <style>
 #imap {
-  width: 80vw;
-  height: 90vh;
+  width: 700px;
+  height: 500px;
 }
 </style>
